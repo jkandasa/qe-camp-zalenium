@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QECamp zalenium demo[Java]" parallel="tests"
+  thread-count="4">
+
+  <listeners>
+    <listener class-name="org.qecamp.zalenium.MyCustomTestListener"></listener>
+  </listeners>
+
+
+  <test name="Developer DevOps page tests">
+    <classes>
+      <class name="org.qecamp.zalenium.tests.TestDevelpoersDevOpsPage" />
+    </classes>
+  </test>
+
+  <test name="Developer Kubernetes page tests">
+    <classes>
+      <class name="org.qecamp.zalenium.tests.TestDevelpoersKubernetesPage" />
+    </classes>
+  </test>
+
+  <test name="Developer Microservices page tests">
+    <classes>
+      <class name="org.qecamp.zalenium.tests.TestDevelpoersMicroservicesPage" />
+    </classes>
+  </test>
+
+  <test name="Developer Service Mesh page tests">
+    <classes>
+      <class name="org.qecamp.zalenium.tests.TestDevelpoersServiceMeshPage" />
+    </classes>
+  </test>
+
+</suite>
