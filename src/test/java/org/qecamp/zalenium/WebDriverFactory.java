@@ -148,7 +148,7 @@ public class WebDriverFactory {
         caps.setCapability("zal:screenResolution", "1920x1080");
         caps.setCapability("zal:idleTimeout", "60");
         caps.setCapability("zal:recordVideo", "true");
-        //caps.setCapability("zal:build", "my build id");
+        caps.setCapability("zal:build", "1.0.0-SNAPSHOT");
 
         _logger.debug("{}", caps.toString());
 
@@ -157,9 +157,8 @@ public class WebDriverFactory {
         // launch the application and maximize the screen
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         webDriver.get(baseUrl);
-
         webDriver.manage().window().maximize();
-        _logger.debug("New selenium driver created. SessionId:[{}]", webDriver.getSessionId());
+        _logger.debug("Selenium webdriver created. SessionId:[{}]", webDriver.getSessionId());
 
         return webDriver;
     }

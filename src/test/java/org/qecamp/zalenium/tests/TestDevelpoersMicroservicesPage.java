@@ -12,7 +12,9 @@ public class TestDevelpoersMicroservicesPage extends TestAbstract {
 
     @BeforeClass
     public void loadInitialPage() {
-        click(By.linkText("DEVELOPERS"));
+        if (webDriver.getCurrentUrl().contains("https://www.redhat.com")) {
+            click(By.linkText("DEVELOPERS"));
+        }
     }
 
     @Test
